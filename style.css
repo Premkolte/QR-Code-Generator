@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1400f4;
+}
+
+.wrapper {
+    background: #ffffff;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    height: 260px;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active {
+    height: 570px;
+}
+
+header h1 {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 16px;
+    color: #474747;
+    margin-top: 5px;
+}
+
+.wrapper .form {
+    margin: 20px 0 25px;
+}
+
+.form :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form input {
+    border: 1px solid #999;
+    font-size: 18px;
+    padding: 0 17px;
+}
+
+.form button {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    background: #2cff56;
+    font-size: 17px;
+}
+
+.wrapper .qr-code {
+    border: 1px solid #ccc;
+    padding: 33px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
