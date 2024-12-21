@@ -3,8 +3,8 @@
 # Define base branch
 BASE_BRANCH="main"
 
-# Loop to create 50 branches, commits, and pull requests
-for i in {1..50}; do
+# Loop to create additional branches, commits, and pull requests (e.g., PRs 51-100)
+for i in {51..100}; do
   # Create a new branch
   BRANCH_NAME="feature-branch-$i"
   git checkout -b $BRANCH_NAME $BASE_BRANCH
